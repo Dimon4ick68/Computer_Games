@@ -88,3 +88,21 @@ caption {
     color: #222;
     padding: 10px;
 }
+
+section span {
+    color: darkblue;
+    font-weight: bold;
+  }
+
+  /* Сусідній селектор: абзац одразу після заголовка */
+  h3 + p {
+    color: #aaa5a5;
+    font-style: italic;
+  }
+
+  /* Дочірній селектор: li, що є прямим нащадком ol */
+  ol > li {
+    margin-bottom: 10px;
+    color: #df3a3a;
+    list-style-position: inside;
+  }
