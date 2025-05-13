@@ -8,6 +8,9 @@ body {
     color: #222;
     margin: 0;
     padding: 0;
+    top: 0;
+    left: 0;
+    margin-top: 60px;
 }
 
 /* Заголовки */
@@ -32,14 +35,17 @@ a:hover {
 
 /* Шапка сайту */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
     background-color: #e0e0e0;
-    padding: 10px;
+    z-index: 1000;
     text-align: center;
-    border-bottom: 2px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-#start{
-    font-weight: 200;
-}
+
 header a {
     margin: 0 10px;
     color: #333;
@@ -89,20 +95,56 @@ caption {
     padding: 10px;
 }
 
-section span {
-    color: darkblue;
+  .game-category {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 15px 0;
+    position: relative; 
+    background-color: #f9f9f9;
+  }
+  
+  .label {
     font-weight: bold;
+    color: #2a2a2a;
   }
-
-  /* Сусідній селектор: абзац одразу після заголовка */
-  h3 + p {
-    color: #aaa5a5;
+  
+  a:link {
+    color: blue;
+  }
+  a:visited {
+    color: purple;
+  }
+  a:hover {
+    color: red;
+    text-decoration: underline;
+  }
+  a:active {
+    color: orange;
+  }
+  
+  
+  /* Псевдоелементи */
+  .label::before {
+    content: "🎮 ";
+  }
+  .label::after {
+    content: " 🕹️";
+  }
+  .side-box {
+    width: 250px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-left: 4px solid #555;
+    float: right;
+    margin: 0 0 10px 10px;
+  }
+  .about-block p:first-child {
     font-style: italic;
+    color: #333;
   }
-
-  /* Дочірній селектор: li, що є прямим нащадком ol */
-  ol > li {
-    margin-bottom: 10px;
-    color: #df3a3a;
-    list-style-position: inside;
+  .about-block {
+    padding: 10px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
   }
